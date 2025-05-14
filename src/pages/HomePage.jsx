@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
-import HeroImage from "../assets/img/hero.png";
+// import HeroImage from "../assets/img/hero.png";
 import { beritaTerbaru, dataSwiperGaleri } from "../data/index";
 import { useNavigate } from "react-router-dom";
 // import SliderComponent from "../components/SliderComponent";
@@ -30,9 +30,9 @@ export default function HomePage() {
               </p>
               <button
                 className="btn btn-outline-danger btn-lg rounded-4 me-2 mb-xs-0 mb-2"
-                onClick={() => navigate("/berita")}
+                onClick={() => navigate("/profil")}
               >
-                Berita Lainnya
+                Selengkapnya
                 <i className="fa-solid fa-chevron-right ms-3"></i>
               </button>
             </Col>

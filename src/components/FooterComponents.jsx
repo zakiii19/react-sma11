@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const FooterComponents = () => {
   return (
-    <div className="footer pt-5">
+    <div className="footer ">
       <Container>
-        <Row>
-          <Col className="d-flex align-items-start justify-content-center ">
+        <Row className="py-3">
+          <Col className="d-flex align-items-start justify-content-center my-3 " md={3}>
             <img
               src="../../images/SMAN_11_SEMARANG.ico"
               alt=""
@@ -15,10 +15,10 @@ const FooterComponents = () => {
               height={30}
               width={30}
             />
-            <h5 className="fw-bold text-center mt-1">SMAN 11 Semarang</h5>
+            <h5 className="fw-bold text-center mt-1" >SMAN 11 Semarang</h5>
           </Col>
-          <Col>
-            <h5>Kontak Kami</h5>
+          <Col className="my-3">
+            <h5 className="fw-bold">Kontak Kami</h5>
             <div className="ig mb-1 mt-4">
               <Link className="text-decoration-none">
                 <i className="fa-brands fa-square-instagram" />
@@ -38,8 +38,8 @@ const FooterComponents = () => {
               </Link>
             </div>
           </Col>
-          <Col>
-            <h5>Alamat</h5>
+          <Col  className="my-3" md={6}>
+            <h5 className=" fw-bold">Alamat</h5>
             <div>
               <p>Jl. Lamper Tengah XIV RT 01 RW 01, Semarang 50248 Indonesia</p>
             </div>

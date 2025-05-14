@@ -1,8 +1,8 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import HeroImage from "../assets/img/hero.png";
-import { beritaTerbaru, dataSwiper } from "../data/index";
+import { beritaTerbaru, dataSwiperGaleri } from "../data/index";
 import { useNavigate } from "react-router-dom";
-import SliderComponent from "../components/SliderComponent";
+// import SliderComponent from "../components/SliderComponent";
 import CalendarComponent from "../components/CalendarComponent";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -17,7 +17,7 @@ export default function HomePage() {
       <header className="w-100 min-vh-100 d-flex align-items-center pt-lg-5">
         <Container>
           <Row className="header-box d-flex align-items-center">
-            <Col lg="6">
+            <Col lg="9">
               <h1 className="mb-4">
                 Selamat Datang di <br />
                 SMA NEGERI 11 SEMARANG
@@ -36,19 +36,19 @@ export default function HomePage() {
                 <i className="fa-solid fa-chevron-right ms-3"></i>
               </button>
             </Col>
-            <Col lg="6" className="pt-lg-0 pt-5">
+            {/* <Col lg="3" className="pt-lg-0 pt-5">
               <img src={HeroImage} alt="hero-img" />
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </header>
 
       {/* section berita terbaru */}
-      <div className="beritanw w-100 min-vh-100">
+      <div className="beritanw py-5 w-100 ">
         <Container>
           <Row>
             <Col>
-              <h1 className="text-center fw-bold ">Berita Terbaru</h1>
+              <h1 className="text-center fw-bold mb-3">Berita Terbaru</h1>
             </Col>
           </Row>
           <Row>
@@ -64,8 +64,8 @@ export default function HomePage() {
                   spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: 4,
-                  spaceBetween: 40,
+                  slidesPerView: 2,
+                  spaceBetween: 20,
                 },
                 1024: {
                   slidesPerView: 3,
@@ -73,18 +73,18 @@ export default function HomePage() {
                 },
               }}
               modules={[Pagination]}
-              className="mySwiper"
+              className="mySwiper mb-3"
             >
               {beritaTerbaru.map((berita) => {
                 return (
                   <SwiperSlide key={berita.id} className="rounded-top">
-                    <Container className="p-0 rounded-top">
+                    <Container className="containerslide p-0 rounded-top">
                       <img
                         src={berita.image}
                         alt="unsplash.com"
-                        className="w-100 mb-5 rounded-top"
+                        className="w-100 mb-4 rounded-top "
                       />
-                      <div className="mb-5 px-3">
+                      <div className="mb-4 px-3">
                         <h5>{berita.title}</h5>
                       </div>
                       <div className="mb-2 px-3 pb-5">
@@ -98,38 +98,8 @@ export default function HomePage() {
               })}
             </Swiper>
           </Row>
-        </Container>
-      </div>
-      <div className="berita w-100 min-vh-100">
-        <Container>
           <Row>
-            <Col>
-              <h1 className="text-center fw-bold ">Berita Terbaru</h1>
-            </Col>
-          </Row>
-          <Row>
-            {beritaTerbaru.map((berita) => {
-              return (
-                <Col key={berita.id}>
-                  <img
-                    src={berita.image}
-                    alt="unsplash.com"
-                    className="w-100 mb-5 rounded-top"
-                  />
-                  <div className="mb-5 px-3">
-                    <h5>{berita.title}</h5>
-                  </div>
-                  <div className="mb-2 px-3 pb-3">
-                    <button className="btn btn-primary rounded-1">
-                      {berita.more}
-                    </button>
-                  </div>
-                </Col>
-              );
-            })}
-          </Row>
-          <Row>
-            <Col className="text-center py-5">
+            <Col className="text-center py-3">
               <button
                 className="btn btn-success rounded-5 btn-lg"
                 onClick={() => navigate("/berita")}
@@ -143,15 +113,15 @@ export default function HomePage() {
       </div>
 
       {/* video profile */}
-      <div className="section-video w-100 min-vh-100">
-        <Container className="mt-4">
+      <div className="section-video w-100 py-5">
+        <Container>
           <Row>
             <Col>
-              <h1 className="text-center fw-bold py-5">Profil Sekolah</h1>
+              <h1 className="text-center fw-bold mb-5">Profil Sekolah</h1>
             </Col>
           </Row>
           <Row className="justify-content-center">
-            <Col md={8}>
+            <Col md={10}>
               <div className="ratio ratio-16x9">
                 <iframe
                   className="rounded-4"
@@ -169,26 +139,14 @@ export default function HomePage() {
       </div>
 
       {/* galeri section */}
-      <div className="galeri w-100 min-vh-100">
+      <div className="py-5 galeri w-100 ">
         <Container>
-          <Row>
+          <Row className="mb-3">
             <Col>
               <h1 className="text-center fw-bold ">Galeri Foto</h1>
             </Col>
           </Row>
           <Row>
-            {/* belum ganti
-            {beritaTerbaru.map((berita) => {
-              return (
-                <Col key={berita.id}>
-                  <img
-                    src={berita.image}
-                    alt="unsplash.com"
-                    className="mb-5 mt-5 rounded-3"
-                  />
-                </Col>
-              );
-            })} */}
             <Swiper
               slidesPerView={1}
               spaceBetween={10}
@@ -201,28 +159,33 @@ export default function HomePage() {
                   spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: 4,
+                  slidesPerView: 2,
                   spaceBetween: 40,
                 },
                 1024: {
-                  slidesPerView: 5,
+                  slidesPerView: 3,
                   spaceBetween: 50,
                 },
               }}
               modules={[Pagination]}
               className="mySwiper"
             >
-              {dataSwiper.map((data) => {
+              {dataSwiperGaleri.map((data) => {
                 return (
-                  <SwiperSlide>
-                    <img src={data.image} className="mb-5 mt-5 rounded-3"></img>
+                  <SwiperSlide className="">
+                    <Container className="containergaleri p-0  rounded-3 ">
+                      <img
+                        src={data.image}
+                        className=" w-100 p-0  rounded-3 "
+                      ></img>
+                    </Container>
                   </SwiperSlide>
                 );
               })}
             </Swiper>
           </Row>
           <Row>
-            <Col className="text-center">
+            <Col className="text-center mt-3">
               <button
                 className="btn btn-success rounded-5 btn-lg"
                 onClick={() => navigate("/galeri")}
@@ -230,6 +193,78 @@ export default function HomePage() {
                 Foto lainnya
                 <i className="fa-solid fa-chevron-right ms-3"></i>
               </button>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      {/* section kalender dan pengumuman */}
+      <div className="kalpeng w-100">
+        <Container>
+          <Row className="py-5 gap-3">
+            <Col className=" " md={3}>
+              <Row className="my-3">
+                <h3 className="text-center fw-bold ">Agenda</h3>
+              </Row>
+              <Row>
+                <Container className="p-0">
+                  <CalendarComponent />
+                </Container>
+              </Row>
+            </Col>
+            <Col className="">
+              <Row className="my-3">
+                <h3 className="text-center fw-bold">Artikel Terbaru</h3>
+              </Row>
+              <Row>
+                <Container className="p-0 ">
+                  <Card className="mb-2">
+                    {/* <Card.Header>Quote</Card.Header> */}
+                    <Card.Body >
+                      <blockquote className="blockquote mb-0">
+                        <h5 className="mb-3">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Integer posuere erat a ante.
+                        </h5>
+                        <footer className="blockquote-footer">
+                          Someone famous in{" "}
+                          <cite title="Source Title">Source Title</cite>
+                        </footer>
+                      </blockquote>
+                    </Card.Body>
+                  </Card>
+                  <Card className="mb-2">
+                    {/* <Card.Header>Quote</Card.Header> */}
+                    <Card.Body>
+                      <blockquote className="blockquote mb-0">
+                        <h5 className="mb-3">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Integer posuere erat a ante.
+                        </h5>
+                        <footer className="blockquote-footer">
+                          Someone famous in{" "}
+                          <cite title="Source Title">Source Title</cite>
+                        </footer>
+                      </blockquote>
+                    </Card.Body>
+                  </Card>
+                  <Card>
+                    {/* <Card.Header>Quote</Card.Header> */}
+                    <Card.Body>
+                      <blockquote className="blockquote mb-0">
+                        <h5 className="mb-3">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Integer posuere erat a ante.
+                        </h5>
+                        <footer className="blockquote-footer">
+                          Someone famous in{" "}
+                          <cite title="Source Title">Source Title</cite>
+                        </footer>
+                      </blockquote>
+                    </Card.Body>
+                  </Card>
+                </Container>
+              </Row>
             </Col>
           </Row>
         </Container>

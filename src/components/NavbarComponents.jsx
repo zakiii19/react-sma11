@@ -8,30 +8,37 @@ import {
   Col,
 } from "react-bootstrap";
 import { navLinks } from "../data/index";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-const NavbarComponents = () =>{
+const NavbarComponents = () => {
   const [show, setShow] = useState(true);
 
   const [changeColor, setChangeColor] = useState(false);
 
-  const changeBackgroundColor = () =>{
-    if (window.scrollY > 10){
+  const changeBackgroundColor = () => {
+    if (window.scrollY > 10) {
       setChangeColor(true);
-    }else {
+    } else {
       setChangeColor(false);
     }
   };
 
+  const [expanded, setExpanded] = useState(false);
+
   useEffect(() => {
     changeBackgroundColor();
-    window.addEventListener('scroll', changeBackgroundColor);
+    window.addEventListener("scroll", changeBackgroundColor);
   });
 
   return (
     <div>
-      <Navbar expand="lg" className={changeColor ? "color-active": ""}>
+      <Navbar
+        expand="lg"
+        expanded={expanded}
+        onToggle={() => setExpanded(!expanded)}
+        className={changeColor || expanded ? "color-active" : ""}
+      >
         <Container className="py-1">
           <Navbar.Brand href="#home" className="fs-3 fw-bold">
             <a className="navbar-brand d-flex align-items-center" href="/">
@@ -57,7 +64,8 @@ const NavbarComponents = () =>{
                           to={link.path}
                           className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active" : ""
-                          } end
+                          }
+                          end
                         >
                           {link.text}
                         </NavLink>
@@ -66,7 +74,10 @@ const NavbarComponents = () =>{
                   })}
                 </Nav>
                 <div className="text-center">
-                  <button className="btn btn-outline-danger rounded-5 ms-3" onClick={() => setShow(false)} >
+                  <button
+                    className="btn btn-outline-danger rounded-5 ms-3"
+                    onClick={() => setShow(false)}
+                  >
                     <i class="fa fa-search"></i> Search
                   </button>
                 </div>
@@ -85,8 +96,12 @@ const NavbarComponents = () =>{
                     />
                   </Col>
                   <Col xs="auto">
-                    <button onClick={() => setShow(true)} className="btn btn-outline-danger rounded-5">
-                      Search</button>
+                    <button
+                      onClick={() => setShow(true)}
+                      className="btn btn-outline-danger rounded-5"
+                    >
+                      Search
+                    </button>
                   </Col>
                 </Row>
               </Form>

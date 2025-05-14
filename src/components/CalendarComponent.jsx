@@ -9,8 +9,8 @@ const CalendarComponent = () => {
     setDate(date);
   };
   return (
-    <div>
-      <Calendar onChange={onChange} value={date} className="rounded-2"/>
+    <div className="d-flex justify-content-center">
+      <Calendar onChange={onChange} value={date} className="rounded-2 "/>
     </div>
   );
 };

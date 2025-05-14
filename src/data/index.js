@@ -322,7 +322,7 @@ export const testimonial = [
   },
 ];
 
-export const dataSwiper = [
+export const dataSwiperGaleri = [
   {
     id: 1,
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",

@@ -22,14 +22,12 @@ export default function HomePage() {
                 Selamat Datang di <br />
                 SMA NEGERI 11 SEMARANG
               </h1>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                velit ullam amet hic quo cupiditate eligendi nostrum earum quae
-                consectetur! Minus itaque iure quia aliquam voluptatem impedit
-                hic animi veritatis!
+              <p className="mb-4 fw-semibold">
+                Mendidik siswa menjadi pribadi TANGGUH: Terampil, Aktif,
+                Nasionalis, Genius, Gembira, Unggul, dan Harmonis.
               </p>
               <button
-                className="btn btn-outline-danger btn-lg rounded-4 me-2 mb-xs-0 mb-2"
+                className="btn btn-danger btn-lg rounded-4 me-2 mb-xs-0 mb-2"
                 onClick={() => navigate("/profil")}
               >
                 Selengkapnya
@@ -48,7 +46,7 @@ export default function HomePage() {
         <Container>
           <Row>
             <Col>
-              <h1 className="text-center fw-bold mb-3">Berita Terbaru</h1>
+              <h1 className="text-center fw-semibold mb-3">Berita Terbaru</h1>
             </Col>
           </Row>
           <Row>
@@ -117,7 +115,7 @@ export default function HomePage() {
         <Container>
           <Row>
             <Col>
-              <h1 className="text-center fw-bold mb-5">Profil Sekolah</h1>
+              <h1 className="text-center fw-semibold mb-5">Profil Sekolah</h1>
             </Col>
           </Row>
           <Row className="justify-content-center">
@@ -143,7 +141,7 @@ export default function HomePage() {
         <Container>
           <Row className="mb-3">
             <Col>
-              <h1 className="text-center fw-bold ">Galeri Foto</h1>
+              <h1 className="text-center fw-semibold ">Galeri Foto</h1>
             </Col>
           </Row>
           <Row>
@@ -204,7 +202,7 @@ export default function HomePage() {
           <Row className="py-5 gap-3">
             <Col className=" " md={3}>
               <Row className="my-3">
-                <h3 className="text-center fw-bold ">Agenda</h3>
+                <h3 className="text-center fw-semibold ">Agenda</h3>
               </Row>
               <Row>
                 <Container className="p-0">
@@ -214,21 +212,20 @@ export default function HomePage() {
             </Col>
             <Col className="">
               <Row className="my-3">
-                <h3 className="text-center fw-bold">Artikel Terbaru</h3>
+                <h3 className="text-center fw-semibold">Artikel Terbaru</h3>
               </Row>
               <Row>
                 <Container className="p-0 ">
                   <Card className="mb-2">
                     {/* <Card.Header>Quote</Card.Header> */}
-                    <Card.Body >
+                    <Card.Body>
                       <blockquote className="blockquote mb-0">
                         <h5 className="mb-3">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Integer posuere erat a ante.
+                          Kelulusan SMA Negeri 11 Semarang
                         </h5>
                         <footer className="blockquote-footer">
-                          Someone famous in{" "}
-                          <cite title="Source Title">Source Title</cite>
+                          Semarang, 16 Mei 2025{" "}
+                          <cite title="Source Title">admin</cite>
                         </footer>
                       </blockquote>
                     </Card.Body>
@@ -238,12 +235,11 @@ export default function HomePage() {
                     <Card.Body>
                       <blockquote className="blockquote mb-0">
                         <h5 className="mb-3">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Integer posuere erat a ante.
+                          Hari Pendidikan Nasional
                         </h5>
                         <footer className="blockquote-footer">
-                          Someone famous in{" "}
-                          <cite title="Source Title">Source Title</cite>
+                          Semarang, 2 Mei 2025{" "}
+                          <cite title="Source Title">admin</cite>
                         </footer>
                       </blockquote>
                     </Card.Body>
@@ -253,12 +249,11 @@ export default function HomePage() {
                     <Card.Body>
                       <blockquote className="blockquote mb-0">
                         <h5 className="mb-3">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Integer posuere erat a ante.
+                          Hari Raya Iul Fitri 1444 H
                         </h5>
                         <footer className="blockquote-footer">
-                          Someone famous in{" "}
-                          <cite title="Source Title">Source Title</cite>
+                          April 2025{" "}
+                          <cite title="Source Title">admin</cite>
                         </footer>
                       </blockquote>
                     </Card.Body>

@@ -8,6 +8,20 @@ import KelasImage7 from "../assets/img/kelas/kelas-7.jpg";
 import KelasImage8 from "../assets/img/kelas/kelas-8.jpg";
 import KelasImage9 from "../assets/img/kelas/kelas-9.jpg";
 
+import BeritaImage1 from "../assets/img/berita/berita-1.jpeg";
+import BeritaImage2 from "../assets/img/berita/berita-2.jpeg";
+import BeritaImage3 from "../assets/img/berita/berita-3.jpeg";
+import BeritaImage4 from "../assets/img/berita/berita-4.jpeg";
+import BeritaImage5 from "../assets/img/berita/berita-5.jpeg";
+import BeritaImage6 from "../assets/img/berita/berita-6.jpeg";
+
+import GaleriImage1 from "../assets/img/galeri/galeri-1.jpeg";
+import GaleriImage2 from "../assets/img/galeri/galeri-2.jpeg";
+import GaleriImage3 from "../assets/img/galeri/galeri-3.jpeg";
+import GaleriImage4 from "../assets/img/galeri/galeri-4.jpeg";
+import GaleriImage5 from "../assets/img/galeri/galeri-5.jpeg";
+import GaleriImage6 from "../assets/img/galeri/galeri-6.jpeg";
+
 import People1 from "../assets/img/testimonial/people-1.jpg";
 import People2 from "../assets/img/testimonial/people-2.jpg";
 import People3 from "../assets/img/testimonial/people-3.jpg";
@@ -178,79 +192,43 @@ export const semuaKelas = [
 export const beritaTerbaru = [
   {
     id: 1,
-    image: KelasImage1,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star-half-stroke",
-    title: "Character Illustration with Adobe Illustrator",
-    price: "Rp. 300.000",
+    image: BeritaImage1,
+    title: "Gold Medals Olimpiade Sains",
     more: "Selengkapnya",
     delay: "",
   },
   {
     id: 2,
-    image: KelasImage2,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "UI UX Website Design for Beginner with Figma",
-    price: "Rp. 340.000",
+    image: BeritaImage2,
+    title: "Memperingati Hari Ozon Sedunia",
     more: "Selengkapnya",
     delay: "200",
   },
   {
     id: 3,
-    image: KelasImage3,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Mastering Web Developer Bootstrap 5",
-    price: "Rp. 280.000",
+    image: BeritaImage3,
+    title: "Jalan Sehat Memperingati HUT RI Ke-79 ",
     more: "Selengkapnya",
     delay: "400",
   },
   {
     id: 4,
-    image: KelasImage4,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Mastering Logo with Adobe Illustrator",
-    price: "Rp. 420.000",
+    image: BeritaImage4,
+    title: "Monitoring dan Evaluasi Pembelajaran",
     more: "Selengkapnya",
     delay: "",
   },
   {
     id: 5,
-    image: KelasImage5,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "3D Modelling for Beginner with 3D Blender",
-    price: "Rp. 380.000",
+    image: BeritaImage5,
+    title: "Memperinati Hari Pramuka Ke 63",
     more: "Selengkapnya",
     delay: "200",
   },
   {
     id: 6,
-    image: KelasImage6,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Mastering Icon Design with Adobe Illustrator",
-    price: "Rp. 300.000",
+    image: BeritaImage6,
+    title: "Membatik Massal Pola Flora dan Fauna",
     more: "Selengkapnya",
     delay: "400",
   },
@@ -325,45 +303,27 @@ export const testimonial = [
 export const dataSwiperGaleri = [
   {
     id: 1,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People1,
-    name: "People 1",
-    skill: "UI UX Designer",
+    image: GaleriImage1,
   },
   {
     id: 2,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People2,
-    name: "People 2",
-    skill: "Flutter Developer",
+    image: GaleriImage2,
   },
   {
     id: 3,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People3,
-    name: "People 3",
-    skill: "Web Developer",
+    image: GaleriImage3,
   },
   {
     id: 4,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People1,
-    name: "People 4",
-    skill: "UI UX Designer",
+    image: GaleriImage4,
   },
   {
     id: 5,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People2,
-    name: "People 5",
-    skill: "Flutter Developer",
+    image: GaleriImage5,
   },
   {
     id: 6,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People3,
-    name: "People 6",
-    skill: "Web Developer",
+    image: GaleriImage6,
   },
 ];
 

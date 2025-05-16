@@ -19,7 +19,7 @@ const FooterComponents = () => {
           </Col>
           <Col className="my-3">
             <h5 className="fw-bold">Kontak Kami</h5>
-            <div className="ig mb-1 mt-4">
+            <div className="ig mb-1 mt-2">
               <Link className="text-decoration-none">
                 <i className="fa-brands fa-square-instagram" />
                 <p className="m-0">sman11semarang.official</p>

@@ -27,7 +27,7 @@ export default function HomePage() {
                 Nasionalis, Genius, Gembira, Unggul, dan Harmonis.
               </p>
               <button
-                className="btn btn-danger btn-lg rounded-4 me-2 mb-xs-0 mb-2"
+                className="btn btn-success btn-lg rounded-4 me-2 mb-xs-0 mb-2"
                 onClick={() => navigate("/profil")}
               >
                 Selengkapnya
@@ -86,7 +86,7 @@ export default function HomePage() {
                         <h5>{berita.title}</h5>
                       </div>
                       <div className="mb-2 px-3 pb-5">
-                        <button className="btn btn-primary rounded-1">
+                        <button className="btn btn-success rounded-4">
                           {berita.more}
                         </button>
                       </div>
@@ -99,7 +99,7 @@ export default function HomePage() {
           <Row>
             <Col className="text-center py-3">
               <button
-                className="btn btn-success rounded-5 btn-lg"
+                className="btn btn-success rounded-4 btn-lg"
                 onClick={() => navigate("/berita")}
               >
                 Berita lainnya
@@ -170,7 +170,7 @@ export default function HomePage() {
             >
               {dataSwiperGaleri.map((data) => {
                 return (
-                  <SwiperSlide className="">
+                  <SwiperSlide>
                     <Container className="containergaleri p-0  rounded-3 ">
                       <img
                         src={data.image}
@@ -185,7 +185,7 @@ export default function HomePage() {
           <Row>
             <Col className="text-center mt-3">
               <button
-                className="btn btn-success rounded-5 btn-lg"
+                className="btn btn-success rounded-4 btn-lg"
                 onClick={() => navigate("/galeri")}
               >
                 Foto lainnya

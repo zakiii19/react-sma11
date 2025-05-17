@@ -28,13 +28,13 @@ const FooterComponents = () => {
             <div className="mail mb-1 mt-1">
               <Link className="text-decoration-none">
                 <i className="fa-solid fa-envelope" />
-                <p className="m-0">sman11semarang.official</p>
+                <p className="m-0">sma11_smg@yahoo.co.id</p>
               </Link>
             </div>
             <div className="phone mb-1 mt-1">
               <Link className="text-decoration-none">
                 <i className="fa-solid fa-phone" />
-                <p className="m-0">sman11semarang.official</p>
+                <p className="m-0">024-8413670</p>
               </Link>
             </div>
           </Col>

@@ -37,7 +37,11 @@ const NavbarComponents = () => {
         expand="lg"
         expanded={expanded}
         onToggle={() => setExpanded(!expanded)}
-        className={changeColor || expanded ? "color-active fw-semibold  py-0 my-0 mx-0" : " fw-semibold py-0 my-0 mx-0"}
+        className={
+          changeColor || expanded
+            ? "color-active fw-semibold  py-0 my-0 mx-0"
+            : " fw-semibold py-0 my-0 mx-0"
+        }
       >
         <Container className="container-navbar my-0 py-0 px-0">
           <Navbar.Brand href="#home" className="fs-3 fw-semibold">
@@ -54,8 +58,8 @@ const NavbarComponents = () => {
           </Navbar.Brand>
           {show && (
             <>
-              <Navbar.Toggle aria-controls="basic-navbar-nav "/>
-              <Navbar.Collapse id="basic-navbar-nav my-3 py-3" >
+              <Navbar.Toggle aria-controls="basic-navbar-nav " />
+              <Navbar.Collapse id="basic-navbar-nav  " className="justify-content-end ">
                 <Nav className=" text-center py-0 ">
                   {navLinks.map((link) => {
                     return (
@@ -63,7 +67,11 @@ const NavbarComponents = () => {
                         <NavLink
                           to={link.path}
                           className={({ isActive, isPending }) =>
-                            isPending ? "pending px-1 py-3 " : isActive ? "active px-1 py-3" : "px-1 py-3"
+                            isPending
+                              ? "pending px-1 py-3 "
+                              : isActive
+                              ? "active px-1 py-3"
+                              : "px-1 py-3"
                           }
                           end
                         >
@@ -72,12 +80,12 @@ const NavbarComponents = () => {
                       </div>
                     );
                   })}
-                  </Nav>
-                <div className="text-center">
+                </Nav>
+                <div className="text-center py-2">
                   <button
-                    className="btn btn-outline-danger rounded-5 ms-3 text-nowrap"
+                    className="btn btn-outline-success rounded-5  text-nowrap"
                     onClick={() => setShow(false)}
-                    >
+                  >
                     <i class="fa fa-search"></i> Search
                   </button>
                 </div>
@@ -86,7 +94,7 @@ const NavbarComponents = () => {
           )}
           {!show && (
             <>
-              <Form inline>
+              <Form inline className="py-2">
                 <Row>
                   <Col xs="auto">
                     <Form.Control
@@ -98,7 +106,7 @@ const NavbarComponents = () => {
                   <Col xs="auto">
                     <button
                       onClick={() => setShow(true)}
-                      className="btn btn-outline-danger rounded-5"
+                      className="btn btn-outline-success rounded-5"
                     >
                       Search
                     </button>

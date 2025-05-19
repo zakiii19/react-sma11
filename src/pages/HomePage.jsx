@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import ArtikelComponent from "../components/ArtikelComponent";
 
 export default function HomePage() {
   let navigate = useNavigate();
@@ -18,11 +19,11 @@ export default function HomePage() {
         <Container>
           <Row className="header-box d-flex align-items-center">
             <Col lg="9">
-              <h1 className="mb-4">
+              <h1 className="mb-4 text-success">
                 Selamat Datang di <br />
                 SMA NEGERI 11 SEMARANG
               </h1>
-              <p className="mb-4 fw-semibold">
+              <p className="mb-4 ">
                 Mendidik siswa menjadi pribadi TANGGUH: Terampil, Aktif,
                 Nasionalis, Genius, Gembira, Unggul, dan Harmonis.
               </p>
@@ -211,13 +212,12 @@ export default function HomePage() {
               </Row>
             </Col>
             <Col className="">
-              <Row className="my-3">
+              {/* <Row className="my-3">
                 <h3 className="text-center fw-semibold">Artikel Terbaru</h3>
               </Row>
               <Row>
                 <Container className="p-0 ">
                   <Card className="mb-2">
-                    {/* <Card.Header>Quote</Card.Header> */}
                     <Card.Body>
                       <blockquote className="blockquote mb-0">
                         <h5 className="mb-3">
@@ -231,7 +231,7 @@ export default function HomePage() {
                     </Card.Body>
                   </Card>
                   <Card className="mb-2">
-                    {/* <Card.Header>Quote</Card.Header> */}
+                    
                     <Card.Body>
                       <blockquote className="blockquote mb-0">
                         <h5 className="mb-3">
@@ -245,7 +245,6 @@ export default function HomePage() {
                     </Card.Body>
                   </Card>
                   <Card>
-                    {/* <Card.Header>Quote</Card.Header> */}
                     <Card.Body>
                       <blockquote className="blockquote mb-0">
                         <h5 className="mb-3">
@@ -259,7 +258,9 @@ export default function HomePage() {
                     </Card.Body>
                   </Card>
                 </Container>
-              </Row>
+              </Row> */}
+
+              <ArtikelComponent/>
             </Col>
           </Row>
         </Container>

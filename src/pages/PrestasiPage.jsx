@@ -56,7 +56,7 @@ const Prestasi = () => {
         <Card className="mt-lg-3 mb-4 shadow-sm rounded-4">
           <Card.Header className=" top-table text-white d-flex align-items-center rounded-top-4">
             <PersonFill className="me-2" />
-            <h5 className="mb-0">Daftar Guru</h5>
+            <h5 className="mb-0">Daftar Prestasi</h5>
           </Card.Header>
           <Card.Body>
           <Table striped borderless>
@@ -84,7 +84,12 @@ const Prestasi = () => {
     } else if (kategori === "guru") {
       data = dataPrestasi.guru;
       return (
-        <>
+        <><Card className="mt-lg-3 mb-4 shadow-sm rounded-4">
+          <Card.Header className=" top-table text-white d-flex align-items-center rounded-top-4">
+            <PersonFill className="me-2" />
+            <h5 className="mb-0">Daftar Prestasi</h5>
+          </Card.Header>
+          <Card.Body>
           <Table striped borderless>
             <thead>
               <tr>
@@ -114,12 +119,19 @@ const Prestasi = () => {
             </tbody>
           </Table>
           {renderPagination(data.length)}
+          </Card.Body></Card>
         </>
       );
     } else if (kategori === "karyawan") {
       data = dataPrestasi.karyawan;
       return (
         <>
+        <Card className="mt-lg-3 mb-4 shadow-sm rounded-4">
+          <Card.Header className=" top-table text-white d-flex align-items-center rounded-top-4">
+            <PersonFill className="me-2" />
+            <h5 className="mb-0">Daftar Prestasi</h5>
+          </Card.Header>
+          <Card.Body>
           <Table striped borderless>
             <thead>
               <tr>
@@ -147,12 +159,19 @@ const Prestasi = () => {
             </tbody>
           </Table>
           {renderPagination(data.length)}
+          </Card.Body></Card>
         </>
       );
     } else if (kategori === "siswa" && tingkatan) {
       data = dataPrestasi.siswa[tingkatan] || [];
       return (
         <>
+        <Card className="mt-lg-3 mb-4 shadow-sm rounded-4">
+          <Card.Header className=" top-table text-white d-flex align-items-center rounded-top-4">
+            <PersonFill className="me-2" />
+            <h5 className="mb-0">Daftar Prestasi</h5>
+          </Card.Header>
+          <Card.Body>
           <Table striped borderless>
             <thead>
               <tr>
@@ -178,6 +197,7 @@ const Prestasi = () => {
             </tbody>
           </Table>
           {renderPagination(data.length)}
+          </Card.Body></Card>
         </>
       );
     }

@@ -190,7 +190,7 @@ const Prestasi = () => {
         title="Prestasi Sekolah"
         description="Raih prestasi bersama kami! Lihat pencapaian siswa dan sekolah di berbagai bidang."
       />
-      <Container className="my-4">
+      <Container className="w-100 min-vh-100 my-4">
         <h2 className="mb-4">Daftar Prestasi</h2>
 
         <div className="d-flex mb-3 gap-2">

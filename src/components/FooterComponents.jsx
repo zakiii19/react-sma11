@@ -9,7 +9,7 @@ const FooterComponents = () => {
         <Row className="py-3">
           <Col className="d-flex align-items-start justify-content-center my-3 " md={3}>
             <img
-              src="../src/assets/img/SMAN_11_SEMARANG.ico"
+              src="../src/assets/img/SMAN_11_SEMARANG.png"
               alt=""
               className="d-inline-block text-center"
               height={30}

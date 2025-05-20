@@ -10,6 +10,7 @@ import {
 import { navLinks } from "../data/index";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import LogoImage from "../assets/img/SMAN_11_SEMARANG.png";
 
 const NavbarComponents = () => {
   const [show, setShow] = useState(true);
@@ -47,7 +48,7 @@ const NavbarComponents = () => {
           <Navbar.Brand href="#home" className="fs-3 fw-semibold">
             <a className="navbar-brand d-flex align-items-center" href="/">
               <img
-                src="../src/assets/img/SMAN_11_SEMARANG.png"
+                src={LogoImage}
                 alt=""
                 width="40"
                 height="40"

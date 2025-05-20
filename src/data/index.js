@@ -1541,42 +1541,52 @@ export const downloadItems = [
   {
     title: "Pengajuan Surat Keterangan KEDINASAN",
     description: "File surat keterangan untuk keperluan pendaftaran kedinasan.",
+    link: "https://drive.google.com/file/d/1DzeGQTAx0Vmcf1aeawcSZfkNUATfuG-k/view?usp=sharing"
   },
   {
     title: "Pengajuan Surat Keterangan MASUK Perguruan Tinggi",
     description: "Digunakan untuk keperluan pendaftaran PTN/PTS.",
+    link: "https://drive.google.com/file/d/1DzeGQTAx0Vmcf1aeawcSZfkNUATfuG-k/view?usp=sharing"
   },
   {
     title: "Pengajuan Surat Keterangan MASUK POLINES",
     description: "Khusus untuk calon mahasiswa Politeknik Negeri Semarang.",
+    link: "https://drive.google.com/file/d/1DzeGQTAx0Vmcf1aeawcSZfkNUATfuG-k/view?usp=sharing"
   },
   {
     title: "Pengajuan Surat Keterangan MENGIKUTI UTBK 2023",
     description: "Surat resmi untuk keikutsertaan UTBK tahun 2023.",
+    link: "https://drive.google.com/file/d/1DzeGQTAx0Vmcf1aeawcSZfkNUATfuG-k/view?usp=sharing"
   },
   {
     title: "Hasil SNBT",
     description: "File rekap hasil SNBT siswa tahun berjalan.",
+    link: "https://drive.google.com/file/d/1DzeGQTAx0Vmcf1aeawcSZfkNUATfuG-k/view?usp=sharing"
   },
   {
     title: "KIP",
     description: "Panduan dan formulir terkait KIP Kuliah.",
+    link: "https://drive.google.com/file/d/1DzeGQTAx0Vmcf1aeawcSZfkNUATfuG-k/view?usp=sharing"
   },
   {
     title: "Informasi Kelulusan",
     description: "Daftar siswa yang dinyatakan lulus tahun ini.",
+    link: "https://drive.google.com/file/d/1DzeGQTAx0Vmcf1aeawcSZfkNUATfuG-k/view?usp=sharing"
   },
   {
     title: "Tutorial MS. Word",
     description: "Panduan dasar penggunaan Microsoft Word.",
+    link: "https://drive.google.com/file/d/1DzeGQTAx0Vmcf1aeawcSZfkNUATfuG-k/view?usp=sharing"
   },
   {
     title: "Teknik dan Logika Pemrograman",
     description: "Materi pengantar pemrograman untuk siswa.",
+    link: "https://drive.google.com/file/d/1DzeGQTAx0Vmcf1aeawcSZfkNUATfuG-k/view?usp=sharing"
   },
   {
     title: "Tool Dasar Photoshop 7",
     description: "Penggunaan dasar aplikasi Photoshop versi 7.",
+    link: "https://drive.google.com/file/d/1DzeGQTAx0Vmcf1aeawcSZfkNUATfuG-k/view?usp=sharing"
   },
 ];
 

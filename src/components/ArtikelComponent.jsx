@@ -8,28 +8,7 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
-
-// Data dummy artikel
-const articles = [
-  {
-    id: 1,
-    title: "Kegiatan MPLS SMA Negeri 11 Semarang",
-    date: "2025-05-10",
-    content: "MPLS berlangsung selama 3 hari dengan berbagai kegiatan edukatif dan menyenangkan...",
-  },
-  {
-    id: 2,
-    title: "Prestasi Siswa dalam Olimpiade Sains",
-    date: "2025-04-22",
-    content: "Beberapa siswa berhasil meraih medali emas dalam OSN tingkat kota...",
-  },
-  {
-    id: 3,
-    title: "Sosialisasi Kurikulum Merdeka",
-    date: "2025-03-15",
-    content: "Guru dan orang tua mengikuti sosialisasi untuk memahami pendekatan Kurikulum Merdeka...",
-  },
-];
+import { articles } from "../data/index";
 
 const ArtikelComponent = () => {
   const [selectedArticle, setSelectedArticle] = useState(null);
@@ -64,7 +43,7 @@ const ArtikelComponent = () => {
   };
 
   return (
-    <Container className="mt-4">
+    <Container className="my-4">
       <h3>Artikel & Berita</h3>
       <ListGroup className="mt-3">
         {articles.map((article) => (

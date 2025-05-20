@@ -5,8 +5,9 @@
 }
 
 :root {
-    --primary-color: rgb(73, 164, 100);
-    --secondary-color: rgb(139, 217, 137);
+    --primary-color: rgb(12, 196, 128);
+    --secondary-color: rgb(40, 233, 114);
+    --secondary-light-color: rgb(167, 255, 201);
     --color-text: #202020;
     --dark-color: #0c160e;
     --light-color: #f2f2f2;
@@ -30,7 +31,7 @@
 .navbar.color-active {
     /* background-color: var(--navbar-color); */
     /* background: linear-gradient(to right,rgb(12, 196, 128),rgb(40, 233, 114)); */
-    background: linear-gradient(to left, #86bf84, #c8f2c2, #8bd989);
+    background: linear-gradient(to right, rgb(12, 196, 128), rgb(40, 233, 114));
     /* color: var(--navbar-color-text); */
     /* padding: 10px 0px; */
     /* border-bottom: 2px solid rgba(221, 204, 51, 0.11); */
@@ -43,12 +44,14 @@
     color: var(--navbar-color-text);
 
 } */
-.navbar-brand{
-    color:  var(--navbar-color);
+.navbar-brand {
+    color: var(--navbar-color);
 }
+
 .navbar.color-active .nav-link .active {
-    color:  #0b6b2b;
+    color: #0b6b2b;
 }
+
 .navbar .nav-link a {
     /* padding: auto; */
     /* padding: 10px 0px; */
@@ -98,7 +101,7 @@
         /* linear-gradient(rgb(138, 217, 137),rgba(138, 217, 137, 0.911),rgba(138, 217, 137, 0.699), rgb(255, 255, 255)), */
         /* opacity( 0.95), */
         /* linear-gradient(to right,rgba(12, 196, 129, 0.705),rgba(40, 233, 114, 0.651)), */
-        linear-gradient(to left, #86bf84, #c8f2c2cb, #8ad989),
+        linear-gradient(to right, rgba(12, 196, 129, 0.767), rgba(40, 233, 114, 0.616)),
         url("../../assets/img/hero1.png");
     /* background: #c6ffdd00; */
 
@@ -124,14 +127,14 @@
     font-size: 3.2rem;
     font-weight: 600;
     color: var(--navbar-color);
-    
+
 
 }
 
 .homepage .header-box p {
     line-height: 1;
     color: var(--navbar-color);
-    
+
     font-weight: 500;
 }
 
@@ -178,16 +181,14 @@
     /* background-color: var(--primary-color); */
     background: #c6ffdd;
 
-    background: -webkit-linear-gradient(to left, #86bf84, #c8f2c2, #8bd989);
-
-    background: linear-gradient(to left, #86bf84, #c8f2c2, #8bd989);
+    background: linear-gradient(to right, rgb(12, 196, 128), rgb(40, 233, 114));
     /* padding-bottom: 40px; */
 }
 
 
 
 .homepage .beritanw .row:nth-child(1) h1 {
-    color: var(--dark-color);
+    color: var(--navbar-color);
 }
 
 
@@ -235,9 +236,8 @@
     background-color: var(--primary-color);
     background: #c6ffdd;
 
-    background: -webkit-linear-gradient(to left, #86bf84, #c8f2c2, #8bd989);
+    background: linear-gradient(to right, rgb(12, 196, 128), rgb(40, 233, 114));
 
-    background: linear-gradient(to left, #86bf84, #c8f2c2, #8bd989);
 }
 
 .homepage .galeri .swiper {
@@ -268,28 +268,43 @@
 .profil header {
     width: 100%;
     height: 100vh;
-    background: #c6ffdd;
+    background: linear-gradient(to right, rgb(12, 196, 128), rgb(40, 233, 114));
 
-    background: -webkit-linear-gradient(to left, #86bf84, #c8f2c2, #8bd989);
-
-    background: linear-gradient(to left, #86bf84, #c8f2c2, #8bd989);
 
 }
 
+.profil .tittle-header {
+    color: var(--navbar-color);
+}
+
+.profil .desc-header {
+    color: var(--navbar-color);
+}
+
 .profil .sejarah {
-    background-color: var(--light-color);
+    background-color: var(--secondary-light-color);
     text-align: justify;
     text-justify: inter-word;
     padding: 0 1rem;
     line-height: 1.6;
 }
 
-.profil .sarpras .card:hover {
-  transform: scale(1.02);
-  transition: 0.3s ease;
+.profil .sejarah {
+    color: var(--color-text);
 }
 
-.gdk{
+
+.profil .sarpras .card {
+    background-color: var(--secondary-light-color);
+
+}
+
+.profil .sarpras .card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+
+.gdk {
     background-color: var(--light-color);
 }
 
@@ -302,55 +317,88 @@
 } */
 
 /* beritapage */
+
 .custom-modal-top .modal-dialog {
-  margin-top: 60px; /* Sesuaikan dengan tinggi navbar */
-  z-index: 999999;     /* Lebih tinggi dari navbar jika navbar pakai z-index */
+    margin-top: 60px;
+    /* Sesuaikan dengan tinggi navbar */
+    z-index: 999999;
+    /* Lebih tinggi dari navbar jika navbar pakai z-index */
+}
+
+/* gdkpage */
+.top-table {
+    background: linear-gradient(to right, rgb(12, 196, 128), rgb(40, 233, 114));
+
+}
+
+.page-link {
+  color: #43a047; /* biru */
+  border: 1px solid #43a047;
+}
+.page-item.active .page-link {
+  background-color: #43a047;  /* hijau tua */
+  border-color: #388e3c;
+  color: white;
+}
+.page-link:hover {
+  background-color: #6dc972;
+  border-color: #43a047;
+  color: white;
 }
 
 
 /* galeripage */
 
 .my-masonry-grid {
-  display: -webkit-box; /* Safari support */
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -16px; /* gutter size offset */
-  width: auto;
+    display: -webkit-box;
+    /* Safari support */
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -16px;
+    /* gutter size offset */
+    width: auto;
 }
+
 .my-masonry-grid_column {
-  padding-left: 16px;
-  background-clip: padding-box;
+    padding-left: 16px;
+    background-clip: padding-box;
 }
 
 .gallery-card {
-  margin-bottom: 16px;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .gallery-card:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .gallery-img-wrapper {
-  height: auto;
-  overflow: hidden;
+    height: auto;
+    overflow: hidden;
 }
 
 .gallery-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
 .gallery-img-wrapper:hover .gallery-img {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
+
+/* kegiatan */
+.kegiatan .ekstra .card :hover {
+    transform: scale(1.01);
+    transition: 0.3s ease;
+}
 
 /* Footer */
 .footer {

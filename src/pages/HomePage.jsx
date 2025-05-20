@@ -1,17 +1,58 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
-// import HeroImage from "../assets/img/hero.png";
+import { Container, Row, Col, Modal, Button, Form } from "react-bootstrap";
+import { Pagination } from "swiper/modules";
 import { beritaTerbaru, dataSwiperGaleri } from "../data/index";
 import { useNavigate } from "react-router-dom";
-// import SliderComponent from "../components/SliderComponent";
 import CalendarComponent from "../components/CalendarComponent";
 import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useState } from "react";
+
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
 import ArtikelComponent from "../components/ArtikelComponent";
 
 export default function HomePage() {
   let navigate = useNavigate();
+
+  // new
+  const [showModal, setShowModal] = useState(false);
+  const [selectedBerita, setSelectedBerita] = useState(null);
+  const [formData, setFormData] = useState({
+    nama: "",
+    email: "",
+    komentar: "",
+  });
+
+  const handleOpenModal = (berita) => {
+    setSelectedBerita(berita);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setSelectedBerita(null);
+    setFormData({
+      nama: "",
+      email: "",
+      komentar: "",
+    });
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Komentar dikirim:", formData);
+    alert("Komentar berhasil dikirim!");
+    handleCloseModal();
+  };
+
+  const [showImageModal, setShowImageModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
     <div className="homepage">
@@ -19,7 +60,7 @@ export default function HomePage() {
         <Container>
           <Row className="header-box d-flex align-items-center">
             <Col lg="9">
-              <h1 className="mb-4 text-success">
+              <h1 className="mb-4">
                 Selamat Datang di <br />
                 SMA NEGERI 11 SEMARANG
               </h1>
@@ -42,8 +83,9 @@ export default function HomePage() {
         </Container>
       </header>
 
-      {/* section berita terbaru */}
-      <div className="beritanw py-5 w-100 ">
+      {/* section berita */}
+
+      <div className="beritanw py-5 w-100">
         <Container>
           <Row>
             <Col>
@@ -54,54 +96,44 @@ export default function HomePage() {
             <Swiper
               slidesPerView={1}
               spaceBetween={6}
-              pagination={{
-                clickable: true,
-              }}
+              pagination={{ clickable: true }}
               breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                768: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 50 },
               }}
               modules={[Pagination]}
               className="mySwiper mb-3"
             >
-              {beritaTerbaru.map((berita) => {
-                return (
-                  <SwiperSlide key={berita.id} className="rounded-top">
-                    <Container className="containerslide p-0 rounded-top">
-                      <img
-                        src={berita.image}
-                        alt="unsplash.com"
-                        className="w-100 mb-4 rounded-top "
-                      />
-                      <div className="mb-4 px-3">
-                        <h5>{berita.title}</h5>
-                      </div>
-                      <div className="mb-2 px-3 pb-5">
-                        <button className="btn btn-success rounded-4">
-                          {berita.more}
-                        </button>
-                      </div>
-                    </Container>
-                  </SwiperSlide>
-                );
-              })}
+              {beritaTerbaru.map((berita) => (
+                <SwiperSlide key={berita.id} className="rounded-top">
+                  <Container className="containerslide p-0 rounded-top">
+                    <img
+                      src={berita.image}
+                      alt={berita.title}
+                      className="w-100 mb-4 rounded-top"
+                    />
+                    <div className="mb-4 px-3">
+                      <h5>{berita.title}</h5>
+                    </div>
+                    <div className="mb-2 px-3 pb-5">
+                      <button
+                        className="btn btn-success rounded-4"
+                        onClick={() => handleOpenModal(berita)}
+                      >
+                        {berita.more}
+                      </button>
+                    </div>
+                  </Container>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </Row>
           <Row>
             <Col className="text-center py-3">
               <button
                 className="btn btn-success rounded-4 btn-lg"
-                onClick={() => navigate("/berita")}
+                onClick={() => alert("Navigasi ke halaman berita lainnya")}
               >
                 Berita lainnya
                 <i className="fa-solid fa-chevron-right ms-3"></i>
@@ -109,6 +141,70 @@ export default function HomePage() {
             </Col>
           </Row>
         </Container>
+
+        {/* Modal */}
+
+        <Modal show={showModal} onHide={handleCloseModal} size="lg" centered>
+          <Modal.Header closeButton>
+            <Modal.Title className="fw-bold fs-4">
+              {selectedBerita?.title}
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {/* Konten Berita */}
+            <p className="mb-4">{selectedBerita?.content}</p>
+
+            {/* Komentar Form */}
+            <h5 className="fw-semibold mb-3">Tinggalkan Komentar</h5>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group className="mb-3">
+                <Form.Label className="fw-medium">Nama</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="nama"
+                  value={formData.nama}
+                  onChange={handleChange}
+                  required
+                />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label className="fw-medium">Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </Form.Group>
+              <Form.Group className="mb-4">
+                <Form.Label className="fw-medium">Komentar</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  name="komentar"
+                  value={formData.komentar}
+                  onChange={handleChange}
+                  required
+                />
+              </Form.Group>
+
+              {/* Tombol */}
+              <div className="d-flex justify-content-end">
+                <Button
+                  variant="secondary"
+                  onClick={handleCloseModal}
+                  className="me-2"
+                >
+                  Tutup
+                </Button>
+                <Button variant="success" type="submit">
+                  Kirim Komentar
+                </Button>
+              </div>
+            </Form>
+          </Modal.Body>
+        </Modal>
       </div>
 
       {/* video profile */}
@@ -173,15 +269,39 @@ export default function HomePage() {
                 return (
                   <SwiperSlide>
                     <Container className="containergaleri p-0  rounded-3 ">
-                      <img
+                      {/* <img
                         src={data.image}
                         className=" w-100 p-0  rounded-3 "
-                      ></img>
+                      ></img> */}
+                      <img
+                        src={data.image}
+                        className="w-100 p-0 rounded-3"
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          setSelectedImage(data.image);
+                          setShowImageModal(true);
+                        }}
+                      />
                     </Container>
                   </SwiperSlide>
                 );
               })}
             </Swiper>
+            <Modal
+              show={showImageModal}
+              onHide={() => setShowImageModal(false)}
+              centered
+              size="lg"
+            >
+              <Modal.Header closeButton />
+              <Modal.Body className="text-center">
+                <img
+                  src={selectedImage}
+                  alt="Preview"
+                  className="img-fluid rounded"
+                />
+              </Modal.Body>
+            </Modal>
           </Row>
           <Row>
             <Col className="text-center mt-3">
@@ -212,61 +332,11 @@ export default function HomePage() {
               </Row>
             </Col>
             <Col className="">
-              {/* <Row className="my-3">
-                <h3 className="text-center fw-semibold">Artikel Terbaru</h3>
-              </Row>
-              <Row>
-                <Container className="p-0 ">
-                  <Card className="mb-2">
-                    <Card.Body>
-                      <blockquote className="blockquote mb-0">
-                        <h5 className="mb-3">
-                          Kelulusan SMA Negeri 11 Semarang
-                        </h5>
-                        <footer className="blockquote-footer">
-                          Semarang, 16 Mei 2025{" "}
-                          <cite title="Source Title">admin</cite>
-                        </footer>
-                      </blockquote>
-                    </Card.Body>
-                  </Card>
-                  <Card className="mb-2">
-                    
-                    <Card.Body>
-                      <blockquote className="blockquote mb-0">
-                        <h5 className="mb-3">
-                          Hari Pendidikan Nasional
-                        </h5>
-                        <footer className="blockquote-footer">
-                          Semarang, 2 Mei 2025{" "}
-                          <cite title="Source Title">admin</cite>
-                        </footer>
-                      </blockquote>
-                    </Card.Body>
-                  </Card>
-                  <Card>
-                    <Card.Body>
-                      <blockquote className="blockquote mb-0">
-                        <h5 className="mb-3">
-                          Hari Raya Iul Fitri 1444 H
-                        </h5>
-                        <footer className="blockquote-footer">
-                          April 2025{" "}
-                          <cite title="Source Title">admin</cite>
-                        </footer>
-                      </blockquote>
-                    </Card.Body>
-                  </Card>
-                </Container>
-              </Row> */}
-
-              <ArtikelComponent/>
+              <ArtikelComponent />
             </Col>
           </Row>
         </Container>
       </div>
-      {/* <CalendarComponent/> */}
-      {/* <SliderComponent/> */}
     </div>
   );
 }

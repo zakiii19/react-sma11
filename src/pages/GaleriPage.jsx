@@ -95,17 +95,11 @@ import React, { useState } from 'react';
 import Masonry from 'react-masonry-css';
 import { Card, Modal, Container } from 'react-bootstrap';
 import HeroComponent from '../components/HeroComponent';
+import { galeriItems } from "../data/index";
+
 // import './Galeri.css'; // Untuk efek hover & responsive
 
-const galeriItems = [
-  { id: 1, title: "Upacara Bendera", image: "../../public/images/herokepsek.png" },
-  { id: 2, title: "Kegiatan Pramuka", image: "../../public/images/herokepsek.png" },
-  { id: 3, title: "Lomba 17 Agustus", image: "../../public/images/herokepsek.png" },
-  { id: 4, title: "Lomba 17 Agustus", image: "../../public/images/carousel1.png" },
-  { id: 5, title: "Lomba 17 Agustus", image: "../../public/images/herokepsek.png" },
-  { id: 6, title: "Lomba 17 Agustus", image: "../../public/images/herokepsek.png" },
-  // Tambah lebih banyak gambar sesuai kebutuhan
-];
+
 
 const breakpointColumnsObj = {
   default: 3,

@@ -47,7 +47,7 @@ const NavbarComponents = () => {
           <Navbar.Brand href="#home" className="fs-3 fw-semibold">
             <a className="navbar-brand d-flex align-items-center" href="/">
               <img
-                src="../../public/images/SMAN_11_SEMARANG.ico"
+                src="../src/assets/img/SMAN_11_SEMARANG.ico"
                 alt=""
                 width="40"
                 height="40"

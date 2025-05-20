@@ -16,41 +16,13 @@ const StaffTableComponents = () => {
   return (
     <>
       <Container className="stable pt-lg-1 pb-lg-5 ">
-        {/* <h3 className="pt-3 pb-1 fw-semibold">Data Staf TU</h3>
-      <Table striped borderless hover responsive >
-        <thead>
-          <tr>
-            <th>NO.</th>
-            <th>NAMA KARYAWAN</th>
-            <th>STATUS</th>
-            <th>TUGAS</th>
-          </tr>
-        </thead>
-        <tbody>
-          {currentStaffs.map((s) => (
-            <tr key={s.no}>
-              <td>{s.no}</td>
-              <td>{s.name}</td>
-              <td>{s.status}</td>
-              <td>{s.task}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-      <Pagination  size='sm' className='justify-content-center pt-2 pb-5'>
-        {[...Array(totalPages)].map((_, i) => (
-          <Pagination.Item key={i} active={i + 1 === currentPage} onClick={() => setCurrentPage(i + 1)}>
-            {i + 1}
-          </Pagination.Item>
-        ))}
-      </Pagination> */}
         <Card className="mb-4 shadow-sm rounded-4">
-          <Card.Header className="bg-success text-white d-flex align-items-center rounded-top-4">
+          <Card.Header className="top-table text-white d-flex align-items-center rounded-top-4">
             <PeopleFill className="me-2" />
             <h5 className="mb-0">Data Staf TU</h5>
           </Card.Header>
           <Card.Body>
-            <Table striped bordered hover responsive className="mb-3">
+            <Table striped borderless hover responsive className="mb-3">
               <thead className="table-success">
                 <tr>
                   <th>NO.</th>

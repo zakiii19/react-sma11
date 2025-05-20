@@ -1,7 +1,6 @@
 import NavbarComponents from "../components/NavbarComponents";
 import { Container, Row, Col, Card, Table, Accordion } from "react-bootstrap";
 import React from "react";
-// import { useNavigate } from "react-router-dom";
 import HeroImage from "../assets/img/herokepsek.png";
 import VisiImage from "../assets/img/berita/berita-1.jpeg";
 
@@ -17,11 +16,11 @@ const ProfilPage = () => {
               <img src={HeroImage} alt="hero-img" className="w-100" />
             </Col>
             <Col lg="8">
-              <h1 className="mb-4 fw-semibold">
+              <h1 className="tittle-header mb-4 fw-semibold">
                 Selamat Datang di <br />
                 SMA NEGERI 11 SEMARANG
               </h1>
-              <p className="mb-4">
+              <p className="desc-header mb-4">
                 Kami berkomitmen untuk memberikan pendidikan terbaik melalui
                 lingkungan belajar yang kondusif, tenaga pendidik profesional,
                 serta program-program unggulan yang mendorong potensi siswa

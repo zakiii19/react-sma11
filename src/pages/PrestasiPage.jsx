@@ -185,12 +185,12 @@ const Prestasi = () => {
   };
 
   return (
-    <>
+    <div className="w-100 min-vh-75">
       <HeroComponent
         title="Prestasi Sekolah"
         description="Raih prestasi bersama kami! Lihat pencapaian siswa dan sekolah di berbagai bidang."
       />
-      <Container className="w-100 min-vh-75 my-4">
+      <Container className=" my-4">
         <h2 className="mb-4">Daftar Prestasi</h2>
 
         <div className="d-flex mb-3 gap-2">
@@ -258,7 +258,7 @@ const Prestasi = () => {
 
         {renderTable()}
       </Container>
-    </>
+    </div>
   );
 };
 

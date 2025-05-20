@@ -133,7 +133,7 @@ export default function HomePage() {
             <Col className="text-center py-3">
               <button
                 className="btn btn-success rounded-4 btn-lg"
-                onClick={() => alert("Navigasi ke halaman berita lainnya")}
+                onClick={() => navigate("/profil")}
               >
                 Berita lainnya
                 <i className="fa-solid fa-chevron-right ms-3"></i>

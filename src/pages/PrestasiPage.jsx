@@ -185,7 +185,7 @@ const Prestasi = () => {
   };
 
   return (
-    <div className="w-100 min-vh-75">
+    <div className="w-100 min-vh-100">
       <HeroComponent
         title="Prestasi Sekolah"
         description="Raih prestasi bersama kami! Lihat pencapaian siswa dan sekolah di berbagai bidang."

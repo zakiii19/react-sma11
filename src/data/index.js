@@ -12,10 +12,6 @@ import GaleriImage4 from "../assets/img/galeri/galeri-4.jpeg";
 import GaleriImage5 from "../assets/img/galeri/galeri-5.jpeg";
 import GaleriImage6 from "../assets/img/galeri/galeri-6.jpeg";
 
-import People1 from "../assets/img/testimonial/people-1.jpg";
-import People2 from "../assets/img/testimonial/people-2.jpg";
-import People3 from "../assets/img/testimonial/people-3.jpg";
-
 export const navLinks = [
   {
     id: 1,

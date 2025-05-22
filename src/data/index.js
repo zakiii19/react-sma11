@@ -875,7 +875,7 @@ export const dataPrestasi = {
       prestasi: "Finalis",
       tahun: 2020,
       keterangan: "21 Oktober 2020",
-      bukti: "", // Data tidak tersedia
+      bukti: "", 
     },
   ],
   karyawan: [
